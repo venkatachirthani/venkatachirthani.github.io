@@ -1,27 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Data Portfolio — [Your Name]</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #222; }
-    h1 { color: #003057; }
-    .case-study { margin-bottom: 60px; }
-    iframe { width: 100%; height: 600px; border: none; border-radius: 8px; margin-top: 20px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Analytics Portfolio - Your Name</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #222222;
+    line-height: 1.6;
+  }
+  h1 {
+    color: #003057;
+    border-bottom: 3px solid #E01A2B;
+    padding-bottom: 10px;
+  }
+  h2 {
+    color: #1E3932;
+    margin-top: 50px;
+  }
+  .case-study {
+    margin-bottom: 60px;
+  }
+  .case-study p {
+    color: #333333;
+  }
+  iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .tag {
+    display: inline-block;
+    background: #F2F0EB;
+    color: #00704A;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 6px;
+  }
+</style>
 </head>
 <body>
+
   <h1>Data Analytics Portfolio</h1>
+  <p>Financial performance dashboards built in Power BI using SEC EDGAR filing data.</p>
 
   <div class="case-study">
-    <h2>Costco Wholesale — Financial Performance Dashboard</h2>
-    <p><!-- paste Costco narrative here --></p>
-    <iframe src="PASTE_YOUR_PUBLISH_TO_WEB_LINK_HERE"></iframe>
+    <h2>Costco Wholesale &mdash; Financial Performance Dashboard</h2>
+    <span class="tag">Power BI</span>
+    <span class="tag">SEC EDGAR API</span>
+    <span class="tag">DAX</span>
+    <p>
+      Costco's business model depends on volume and membership economics rather than
+      high retail margins, which makes its financial statements read differently from
+      a typical retailer. This project analyzes five years of Costco's SEC filings to
+      answer a specific question: how does Costco sustain profitability while operating
+      on razor-thin merchandise margins?
+    </p>
+    <p>
+      Using SEC EDGAR's XBRL API, I built an automated data pipeline in Power Query that
+      pulls structured financial facts directly from Costco's 10-K and 10-Q filings,
+      resolves inconsistencies in how financial concepts are tagged across filing years,
+      and models the result in a proper star schema.
+    </p>
+    <iframe src="PASTE_YOUR_COSTCO_PUBLISH_TO_WEB_LINK_HERE" title="Costco Dashboard"></iframe>
   </div>
 
   <div class="case-study">
-    <h2>Starbucks — Financial Performance Dashboard</h2>
-    <p><!-- paste Starbucks narrative here --></p>
-    <iframe src="PASTE_YOUR_PUBLISH_TO_WEB_LINK_HERE"></iframe>
+    <h2>Starbucks &mdash; Financial Performance Dashboard</h2>
+    <span class="tag">Power BI</span>
+    <span class="tag">SEC EDGAR API</span>
+    <span class="tag">DAX</span>
+    <p>
+      Starbucks operates a fundamentally different economic model than a wholesale
+      retailer &mdash; premium pricing, high gross margins, and a much more seasonal
+      revenue pattern tied to holiday demand. This project uses the same EDGAR-based
+      pipeline built for the Costco analysis to explore Starbucks' financials, letting
+      the two dashboards serve as a direct comparison of two very different retail
+      economics.
+    </p>
+    <p>
+      The dashboard highlights Starbucks' quarterly seasonality, tracks margin
+      compression and recovery across recent years, and includes a balance sheet view
+      that surfaces negative stockholders' equity caused by sustained share buybacks,
+      with return-on-equity calculations adjusted accordingly.
+    </p>
+    <iframe src="PASTE_YOUR_STARBUCKS_PUBLISH_TO_WEB_LINK_HERE" title="Starbucks Dashboard"></iframe>
   </div>
+
 </body>
 </html>
